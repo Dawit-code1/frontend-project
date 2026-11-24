@@ -1,0 +1,93 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    border: 5px solid purple;
+    padding: 5px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+/* Grid systeem */
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Kolommen */
+.row div {
+    border: 1px solid black;
+    padding: 15px;
+    min-width: 0;
+}
+
+/* Kolombreedtes */
+.col-12 {
+    grid-column: span 12;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+
+
+/* Mobiel */
+@media (max-width: 576px) {
+    .container {
+        border: 5px solid red;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .row > * {
+        grid-column: span 1;
+    }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        border: 5px solid blue;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 992px) {
+    .container {
+        border: 5px solid green;
+    }
+}
+
+/* Desktop */
+@media (min-width: 993px) {
+    .container {
+        border: 5px solid purple;
+    }
+}
